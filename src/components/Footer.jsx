@@ -52,7 +52,7 @@ const Footer = () => {
                     <div>
                         <h3 className="text-lg font-semibold mb-4 text-white">For Orders</h3>
                         <div className="bg-white p-4 rounded-xl inline-block">
-                            <QrCode size={120} className="text-gray-900" />
+                            <img src="/pnp_qr.png" alt="" />
                         </div>
                         <p className="text-gray-400 text-sm mt-2">Scan to order via WhatsApp</p>
                     </div>

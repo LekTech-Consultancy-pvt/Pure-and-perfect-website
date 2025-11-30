@@ -1,10 +1,13 @@
 import React, { useRef } from 'react';
-import { Canvas, useFrame } from '@react-three/fiber';
+import { Canvas, useFrame, useLoader } from '@react-three/fiber';
 import { OrbitControls, PerspectiveCamera, Environment, Float, Sparkles } from '@react-three/drei';
 import * as THREE from 'three';
 
+import labelImg from '../assets/label.png';
+
 const MilkBottle = (props) => {
     const mesh = useRef();
+    const texture = useLoader(THREE.TextureLoader, labelImg);
 
     useFrame((state) => {
         const t = state.clock.getElapsedTime();
@@ -47,7 +50,7 @@ const MilkBottle = (props) => {
             {/* Label */}
             <mesh position={[0, -0.5, 0.71]}>
                 <planeGeometry args={[0.8, 0.8]} />
-                <meshStandardMaterial color="#1e88e5" />
+                <meshStandardMaterial map={texture} transparent />
             </mesh>
         </group>
     );
