@@ -38,7 +38,19 @@ const Procedure = () => {
         <section id="process" className="py-20 bg-blue-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-bold text-primary mb-4">Farm to Bottle</h2>
+                    <div className='flex flex-col md:flex-row justify-center md:justify-end items-center gap-10 md:gap-64'>
+                        <h2 className="text-4xl font-bold text-primary mb-4">Farm to Bottle</h2>
+                        <motion.div
+                            initial={{ opacity: 0, x: -50 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            viewport={{ once: true }}
+                            transition={{ duration: 0.6 }}
+
+                        >
+                            <img className='w-52 h-52 object-cover' src="/ffftb.png" alt="" />
+                        </motion.div>
+                    </div>
+
                     <p className="text-gray-600 max-w-2xl mx-auto">
                         Our meticulous process ensures that you get the freshest milk possible, every single day.
                     </p>

@@ -19,7 +19,7 @@ const Navbar = () => {
                 <div className="flex justify-between items-center">
                     <div className="flex-shrink-0 flex items-center">
                         <img src="/pnp_logo.png" alt="" className="w-16 h-16 mr-2 " />
-                        <h1 className="text-2xl font-bold text-primary">Pure & Perfect</h1>
+                        <h1 className={`text-2xl font-bold ${scrolled ? 'text-primary' : 'text-white'}`}>Pure & Perfect</h1>
                     </div>
 
                     <div className="hidden md:flex items-center space-x-8">
